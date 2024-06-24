@@ -3,6 +3,6 @@ package ru.skypro.shop.service;
 import java.util.List;
 
 public interface ShopService {
-    List<Integer> add(List<Integer> ids);
-    List<Integer> get();
+    List<Integer> add(List<Integer> goods);
+    List<Integer> get(List<Integer> goods);
 }

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.skypro.shop.service.ShopService;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class ShopController {
         return shopService.add(goods);
     }
     @GetMapping("get")
-    public List<Integer> get() {
-        return Collections.emptyList();
+    public List<Integer> get(@RequestParam List<Integer> goods) {
+        return shopService.get(goods);
     }
 }

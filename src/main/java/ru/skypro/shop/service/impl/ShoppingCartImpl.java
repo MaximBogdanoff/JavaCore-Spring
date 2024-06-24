@@ -15,13 +15,13 @@ public class ShoppingCartImpl implements ShoppingCart {
     private final Set<Integer> goods=new HashSet<>();
 
     @Override
-    public List<Integer> add(List<Integer> ids) {
+    public List<Integer> add(List<Integer> goods) {
         this.goods.addAll(goods);
         return new ArrayList<>(this.goods);
     }
 
     @Override
-    public List<Integer> get() {
+    public List<Integer> get(List<Integer> goods) {
         return new ArrayList<>(this.goods);
     }
 }
